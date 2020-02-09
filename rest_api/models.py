@@ -140,6 +140,7 @@ class Laundry(models.Model):
     imgUrl = models.CharField(max_length=254, blank=True, null=True)
     status = models.CharField(max_length=10, blank=True, null=True)
     onDelivery = models.BooleanField(default=False)
+    #ordered = models.BooleanField(default=False, null=True, blank=True)
     price_estimated = models.DecimalField(max_digits=9, decimal_places=0, blank=True, null=True)
     
     def __str__(self):
@@ -147,7 +148,7 @@ class Laundry(models.Model):
 
 
 class Clothe(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, unique=True)
     price = models.DecimalField(max_digits=9, decimal_places=0)
     
     def __str__(self):
@@ -166,7 +167,7 @@ class OrderLine(models.Model):
         return self.clothe.name
 
 class Order(models.Model):
-    laundry = models.ForeignKey(Laundry, on_delete=models.CASCADE)
+    laundry = models.ForeignKey(Laundry, on_delete=models.CASCADE, unique=True)
     reference = models.CharField(max_length=60)
     date = models.DateTimeField(auto_now_add=True)
     amount = models.DecimalField(max_digits=9, decimal_places=0)

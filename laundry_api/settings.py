@@ -151,3 +151,8 @@ SIMPLE_JWT = {
 
 
 DATE_INPUT_FORMATS = ('%Y-%m-%d %H:%M:%S',)
+
+#Heroku config
+
+import django_heroku
+django_heroku.settings(locals())
