@@ -26,7 +26,7 @@ SECRET_KEY = '08!$8rz0q^tkifw#t!bvrm(-%!*nthby%r8-%pi(*p+1mal%1$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['laundry-api.herokuapp.com',]
 
 
 # Application definition
@@ -85,9 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  
         'NAME': 'pressing',  
         'USER':'root',  
-        'PASSWORD':'',  
-        'HOST':'localhost',  
-        'PORT':'3306'  
+        'PASSWORD':''  
     }  
 }
 
