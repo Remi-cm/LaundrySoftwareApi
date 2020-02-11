@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'laundry_api.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+'''
 DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
@@ -87,8 +87,18 @@ DATABASES = {
         'USER':'root',  
         'PASSWORD':''  
     }  
-}
+}'''
 
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'DcaCfVWMz6',  
+        'USER': 'DcaCfVWMz6',  
+        'PASSWORD': 'Cn63vr6DHm',
+        'HOST': 'remotemysql.com',
+        'PORT': '3306'  
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

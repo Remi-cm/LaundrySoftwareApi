@@ -140,7 +140,7 @@ class Laundry(models.Model):
     imgUrl = models.CharField(max_length=254, blank=True, null=True)
     status = models.CharField(max_length=10, blank=True, null=True)
     onDelivery = models.BooleanField(default=False)
-    #ordered = models.BooleanField(default=False, null=True, blank=True)
+    ordered = models.BooleanField(default=False, null=True, blank=True)
     price_estimated = models.DecimalField(max_digits=9, decimal_places=0, blank=True, null=True)
     
     def __str__(self):

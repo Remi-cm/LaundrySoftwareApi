@@ -8,9 +8,11 @@ djangorestframework==3.11.0
 djangorestframework-jwt==1.11.0
 djangorestframework-simplejwt==4.4.0
 djoser==2.0.3
+gunicorn==20.0.4
 mysqlclient==1.4.6
 psycopg2==2.8.4
 PyJWT==1.7.1
 pytz==2019.3
+PyYAML==5.3
 sqlparse==0.3.0
 whitenoise==5.0.1
